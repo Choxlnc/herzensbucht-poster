@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anmeldung abschliessen</title>
+<style>
+:root{--gruen:#435243;--salbei:#9AA88E;--beige:#F6F3EC;--gold:#E8AF3A;--text:#2C2623}
+body{margin:0;background:var(--beige);color:var(--text);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:560px;margin:0 auto;padding:64px 20px}
+h1{font-size:1.4rem;color:var(--gruen);margin:0 0 4px}
+.sub{color:var(--salbei);font-weight:600;letter-spacing:.03em;text-transform:uppercase;font-size:.78rem}
+.bar{height:3px;background:var(--gold);width:80px;margin:16px 0 24px}
+a{color:var(--gruen)}
+small{color:#7a736c}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="sub">Herzensbucht Poster</div>
+<h1>Anmeldung wird abgeschlossen</h1>
+<div class="bar"></div>
+<p>Diese Seite leitet dich zurueck an das Programm auf deinem Rechner.</p>
+<p><a id="lnk" href="#">Falls nichts passiert: hier klicken</a></p>
+<p><small>Das Programm muss laufen und auf Port 47312 lauschen.</small></p>
+</div>
+<script>
+var ziel = "http://localhost:47312/tiktok" + window.location.search;
+document.getElementById("lnk").href = ziel;
+window.location.replace(ziel);
+</script>
+</body>
+</html>
